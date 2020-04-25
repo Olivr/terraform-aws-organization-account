@@ -41,16 +41,15 @@ Once complete, run the init command again to push the current state to Terraform
 
 ## AWS Sub-accounts
 
-| Account          | Description                                                                                                    |
-| ---------------- | -------------------------------------------------------------------------------------------------------------- |
-| root             | Master account used to manage the organizational account structure and billing.                                |
-| identity         | Contains all users and policies                                                                                |
-| audit            | Contains all logs                                                                                              |
-| shared-resources | Contains resources that are shared across other accounts such as AMI's, repositories, etc.                     |
-| staging          | Staging environment                                                                                            |
-| production       | Production environment                                                                                         |
-| testing          | Automated testing environment                                                                                  |
-| sandbox-\*       | Sandbox environment created for each developer. _They can use it freely to deploy and test anything they want_ |
+| Account          | Description                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------ |
+| root             | Master account used to manage the organizational account structure and billing             |
+| identity         | Contains all users and policies                                                            |
+| audit            | Contains all logs                                                                          |
+| shared-resources | Contains resources that are shared across other accounts such as AMI's, repositories, etc. |
+| staging          | Staging environment                                                                        |
+| production       | Production environment                                                                     |
+| testing          | Automated testing environment                                                              |
 
 ## Variables file
 
