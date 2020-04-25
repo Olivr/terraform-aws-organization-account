@@ -23,19 +23,15 @@ This terraform script lets you prepare an organization before setting up the env
 
 ## Usage
 
-Clone this repo.
+1. Clone this repo.
 
-Initialize Terraform
+2. You can specify a [variable file](#variables-file) or just continue below and answer the Terraform prompts for variables.
 
-`terraform init`
+3. Initialize Terraform wuth `terraform init`
 
-Run
+4. Run Terraform with `terraform apply`
 
-`terraform apply`
-
-Once complete, run the init command again to push the current state to Terraform Cloud (This script generates the backend configuration for you)
-
-`terraform init`
+Once complete, run the `terraform init` command again to push the current state to Terraform Cloud (This script generates the backend configuration for you)
 
 > And if there are any errors due to timeouts or other weird stuff, try to run again `terraform apply`
 
@@ -43,13 +39,15 @@ Once complete, run the init command again to push the current state to Terraform
 
 | Account          | Description                                                                                |
 | ---------------- | ------------------------------------------------------------------------------------------ |
-| root             | Master account used to manage the organizational account structure and billing             |
+| master\*         | Master account used to manage the organizational account structure and billing             |
 | identity         | Contains all users and policies                                                            |
 | audit            | Contains all logs                                                                          |
 | shared-resources | Contains resources that are shared across other accounts such as AMI's, repositories, etc. |
 | staging          | Staging environment                                                                        |
 | production       | Production environment                                                                     |
 | testing          | Automated testing environment                                                              |
+
+> The root user of the master account should not be used anymore, it is recommended to delete the security credentials you created to run this script and enable 2FA on this account. If you have admin stuff to do, use the admin user created by this script. Being an IAM user, it can [access all the accounts above as an admin](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html).
 
 ## Variables file
 
