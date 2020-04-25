@@ -84,7 +84,7 @@ aws_account_production_email       = "production@acme.com"
  */
 
 tfe_token     = "xxxyyyzzz.atlasv1.xxxyyyzzz"
-tfe_org_name  = "acme"
+tfe_org_name  = "acme" // This script will create it
 tfe_org_email = "acme@acme.com"
 
 
@@ -93,7 +93,7 @@ tfe_org_email = "acme@acme.com"
  */
 
 github_token        = "xxxyyyzzz" // acme-bot
-github_organization = "acme"
+github_organization = "acme" // This should be created already
 ```
 
 ## Further reading
