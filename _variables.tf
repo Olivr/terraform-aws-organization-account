@@ -45,9 +45,9 @@ variable "aws_account_audit_email" {
   description = "Email for audit account"
 }
 
-variable "aws_account_security_email" {
+variable "aws_account_identity_email" {
   type        = string
-  description = "Email for security account"
+  description = "Email for identity account"
 }
 
 variable "aws_account_shared-resources_email" {

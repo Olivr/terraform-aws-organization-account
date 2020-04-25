@@ -4,9 +4,9 @@ This terraform script lets you prepare an organization before setting up the env
 
 ## Features
 
+- Pure Terraform script (no third-party wrapper/CLI)
 - Setup an organization and one AWS account per environment
 - Setup each environment to use its own GitHub repository and its Terraform Cloud workspace
-- Pure Terraform script (no third-party wrapper/CLI)
 
 ## Pre-requisites
 
@@ -31,9 +31,9 @@ This terraform script lets you prepare an organization before setting up the env
 
 4. Run Terraform with `terraform apply`
 
-Once complete, run the `terraform init` command again to push the current state to Terraform Cloud (This script generates the backend configuration for you)
+5. Once complete, run the `terraform init` command again to push the current state to Terraform Cloud (This script generates the backend configuration for you)
 
-> And if there are any errors due to timeouts or other weird stuff, try to run again `terraform apply`
+> If there are any errors due to timeouts or other weird stuff, try to run again `terraform apply`
 
 ## AWS Sub-accounts
 
@@ -69,7 +69,7 @@ aws_profile                        = "acme" // This profile was initiated when I
 aws_default_region                 = "us-east-1"
 aws_org_name                       = "acme"
 aws_account_audit_email            = "audit@acme.com"
-aws_account_security_email         = "security@acme.com"
+aws_account_identity_email         = "identity@acme.com"
 aws_account_shared-resources_email = "shared-resources@acme.com"
 aws_account_testing_email          = "testing@acme.com"
 aws_account_staging_email          = "staging@acme.com"

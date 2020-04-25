@@ -63,6 +63,12 @@ variable "tfe_workspace" {
   default     = ""
 }
 
+variable "tfe_extra_vars" {
+  type        = map(string)
+  description = "Terraform Cloud extra variables"
+  default     = {}
+}
+
 variable "tfe_auto_apply" {
   type        = bool
   description = "If Terraform Cloud should auto-apply the new commits in the GitHub repo"

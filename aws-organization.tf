@@ -31,7 +31,6 @@ resource "aws_iam_user_login_profile" "user_profiles" {
 resource "aws_iam_access_key" "account_keys" {
   for_each = local.aws_admin_accounts
   user     = aws_iam_user.users[each.key].name
-  pgp_key  = var.pgp_key
 }
 
 // Create organization admin group

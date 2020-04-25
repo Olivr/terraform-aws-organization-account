@@ -37,6 +37,11 @@ resource "null_resource" "tfe_backend" {
       tfe_workspace_name = tfe_workspace.setup.name
     })
   }
+
+  provisioner "local-exec" {
+    when    = destroy
+    command = "rm -rf _backend.tf"
+  }
 }
 
 /**

@@ -14,6 +14,9 @@ module "audit_account" {
 
   tfe_organization   = var.tfe_org_name
   tfe_oauth_token_id = tfe_oauth_client.github.oauth_token_id
+  tfe_extra_vars = {
+    organization_name = var.aws_org_name
+  }
 
   github_organization = var.github_organization
   github_template     = "olivr-templates/infra-audit"
