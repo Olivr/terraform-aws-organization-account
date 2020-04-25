@@ -47,7 +47,7 @@ Once complete, run the `terraform init` command again to push the current state 
 | production       | Production environment                                                                     |
 | testing          | Automated testing environment                                                              |
 
-> The root user of the master account should not be used anymore, it is recommended to delete the security credentials you created to run this script and enable 2FA on this account. If you have admin stuff to do, use the admin user created by this script. Being an IAM user, it can [access all the accounts above as an admin](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html).
+> The root user of the master account should not be used anymore, it is recommended to delete the access key you created to run this script and enable 2FA on this account. If you have admin stuff to do, use the **admin** user created by this script. Being an IAM user, it can [switch roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-console.html) and access all the accounts above as an admin.
 
 ## Variables file
 
